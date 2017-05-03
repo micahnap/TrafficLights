@@ -1,0 +1,442 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ViewController"
+provides-nominal:
+- "C14Traffic_Lights14ViewController"
+provides-member:
+- ["C14Traffic_Lights14ViewController", ""]
+provides-dynamic-lookup:
+- "eastLight"
+- "northLight"
+- "southLight"
+- "startStop"
+- "viewDidLoad"
+- "westLight"
+depends-top-level:
+- !private "!"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Sequencer"
+- "TrafficLight"
+- "UIButton"
+- "UIViewController"
+- "ViewController"
+depends-member:
+- !private ["Ps9AnyObject", "Sequencer"]
+- !private ["Ps9AnyObject", "direction"]
+- !private ["Ps9AnyObject", "eastLight"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isSelected"]
+- !private ["Ps9AnyObject", "northLight"]
+- !private ["Ps9AnyObject", "resetLights"]
+- !private ["Ps9AnyObject", "sequencer"]
+- !private ["Ps9AnyObject", "setupLights"]
+- !private ["Ps9AnyObject", "southLight"]
+- !private ["Ps9AnyObject", "start"]
+- !private ["Ps9AnyObject", "stop"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- !private ["Ps9AnyObject", "westLight"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "forEach"]
+- !private ["Ps23BidirectionalCollection", "forEach"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSo15CALayerDelegate", "direction"]
+- !private ["PSo15CALayerDelegate", "isSelected"]
+- !private ["Ps7CVarArg", "Sequencer"]
+- !private ["Ps7CVarArg", "direction"]
+- !private ["Ps7CVarArg", "eastLight"]
+- !private ["Ps7CVarArg", "forEach"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isSelected"]
+- !private ["Ps7CVarArg", "northLight"]
+- !private ["Ps7CVarArg", "resetLights"]
+- !private ["Ps7CVarArg", "sequencer"]
+- !private ["Ps7CVarArg", "setupLights"]
+- !private ["Ps7CVarArg", "southLight"]
+- !private ["Ps7CVarArg", "start"]
+- !private ["Ps7CVarArg", "stop"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- !private ["Ps7CVarArg", "westLight"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Collection", "forEach"]
+- !private ["Ps28CustomDebugStringConvertible", "Sequencer"]
+- !private ["Ps28CustomDebugStringConvertible", "direction"]
+- !private ["Ps28CustomDebugStringConvertible", "eastLight"]
+- !private ["Ps28CustomDebugStringConvertible", "forEach"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isSelected"]
+- !private ["Ps28CustomDebugStringConvertible", "northLight"]
+- !private ["Ps28CustomDebugStringConvertible", "resetLights"]
+- !private ["Ps28CustomDebugStringConvertible", "sequencer"]
+- !private ["Ps28CustomDebugStringConvertible", "setupLights"]
+- !private ["Ps28CustomDebugStringConvertible", "southLight"]
+- !private ["Ps28CustomDebugStringConvertible", "start"]
+- !private ["Ps28CustomDebugStringConvertible", "stop"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- !private ["Ps28CustomDebugStringConvertible", "westLight"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "forEach"]
+- !private ["Ps23CustomStringConvertible", "Sequencer"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "direction"]
+- !private ["Ps23CustomStringConvertible", "eastLight"]
+- !private ["Ps23CustomStringConvertible", "forEach"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isSelected"]
+- !private ["Ps23CustomStringConvertible", "northLight"]
+- !private ["Ps23CustomStringConvertible", "resetLights"]
+- !private ["Ps23CustomStringConvertible", "sequencer"]
+- !private ["Ps23CustomStringConvertible", "setupLights"]
+- !private ["Ps23CustomStringConvertible", "southLight"]
+- !private ["Ps23CustomStringConvertible", "start"]
+- !private ["Ps23CustomStringConvertible", "stop"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- !private ["Ps23CustomStringConvertible", "westLight"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["OC14Traffic_Lights12TrafficLight9Direction", "eastWest"]
+- !private ["OC14Traffic_Lights12TrafficLight9Direction", "northSouth"]
+- !private ["Ps9Equatable", "Sequencer"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "direction"]
+- !private ["Ps9Equatable", "eastLight"]
+- !private ["Ps9Equatable", "eastWest"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isSelected"]
+- !private ["Ps9Equatable", "northLight"]
+- !private ["Ps9Equatable", "northSouth"]
+- !private ["Ps9Equatable", "resetLights"]
+- !private ["Ps9Equatable", "sequencer"]
+- !private ["Ps9Equatable", "setupLights"]
+- !private ["Ps9Equatable", "southLight"]
+- !private ["Ps9Equatable", "start"]
+- !private ["Ps9Equatable", "stop"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- !private ["Ps9Equatable", "westLight"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "forEach"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "Sequencer"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "direction"]
+- !private ["Ps8Hashable", "eastLight"]
+- !private ["Ps8Hashable", "eastWest"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isSelected"]
+- !private ["Ps8Hashable", "northLight"]
+- !private ["Ps8Hashable", "northSouth"]
+- !private ["Ps8Hashable", "resetLights"]
+- !private ["Ps8Hashable", "sequencer"]
+- !private ["Ps8Hashable", "setupLights"]
+- !private ["Ps8Hashable", "southLight"]
+- !private ["Ps8Hashable", "start"]
+- !private ["Ps8Hashable", "stop"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- !private ["Ps8Hashable", "westLight"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps17MutableCollection", "forEach"]
+- !private ["PSo8NSCoding", "Sequencer"]
+- !private ["PSo8NSCoding", "direction"]
+- !private ["PSo8NSCoding", "eastLight"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isSelected"]
+- !private ["PSo8NSCoding", "northLight"]
+- !private ["PSo8NSCoding", "resetLights"]
+- !private ["PSo8NSCoding", "sequencer"]
+- !private ["PSo8NSCoding", "setupLights"]
+- !private ["PSo8NSCoding", "southLight"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- !private ["PSo8NSCoding", "westLight"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "Sequencer"]
+- !private ["PSo26NSExtensionRequestHandling", "eastLight"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "northLight"]
+- !private ["PSo26NSExtensionRequestHandling", "resetLights"]
+- !private ["PSo26NSExtensionRequestHandling", "sequencer"]
+- !private ["PSo26NSExtensionRequestHandling", "setupLights"]
+- !private ["PSo26NSExtensionRequestHandling", "southLight"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- !private ["PSo26NSExtensionRequestHandling", "westLight"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- ["CSo8NSObject", "Sequencer"]
+- ["CSo8NSObject", "TrafficLight"]
+- ["CSo8NSObject", "UIButton"]
+- !private ["CSo8NSObject", "direction"]
+- ["CSo8NSObject", "eastLight"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isSelected"]
+- ["CSo8NSObject", "northLight"]
+- ["CSo8NSObject", "resetLights"]
+- ["CSo8NSObject", "sequencer"]
+- ["CSo8NSObject", "setupLights"]
+- ["CSo8NSObject", "southLight"]
+- !private ["CSo8NSObject", "start"]
+- ["CSo8NSObject", "startStop"]
+- !private ["CSo8NSObject", "stop"]
+- ["CSo8NSObject", "viewDidLoad"]
+- ["CSo8NSObject", "westLight"]
+- !private ["PSo16NSObjectProtocol", "Sequencer"]
+- !private ["PSo16NSObjectProtocol", "direction"]
+- !private ["PSo16NSObjectProtocol", "eastLight"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isSelected"]
+- !private ["PSo16NSObjectProtocol", "northLight"]
+- !private ["PSo16NSObjectProtocol", "resetLights"]
+- !private ["PSo16NSObjectProtocol", "sequencer"]
+- !private ["PSo16NSObjectProtocol", "setupLights"]
+- !private ["PSo16NSObjectProtocol", "southLight"]
+- !private ["PSo16NSObjectProtocol", "start"]
+- !private ["PSo16NSObjectProtocol", "stop"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "westLight"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["Ps22RandomAccessCollection", "forEach"]
+- !private ["Ps26RangeReplaceableCollection", "forEach"]
+- !private ["Ps8Sequence", "forEach"]
+- !private ["C14Traffic_Lights9Sequencer", "init"]
+- !private ["C14Traffic_Lights9Sequencer", "start"]
+- !private ["C14Traffic_Lights9Sequencer", "stop"]
+- !private ["C14Traffic_Lights12TrafficLight", "direction"]
+- !private ["PSo29UIAccessibilityIdentification", "direction"]
+- !private ["PSo29UIAccessibilityIdentification", "isSelected"]
+- !private ["PSo12UIAppearance", "direction"]
+- !private ["PSo12UIAppearance", "isSelected"]
+- !private ["PSo21UIAppearanceContainer", "Sequencer"]
+- !private ["PSo21UIAppearanceContainer", "direction"]
+- !private ["PSo21UIAppearanceContainer", "eastLight"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isSelected"]
+- !private ["PSo21UIAppearanceContainer", "northLight"]
+- !private ["PSo21UIAppearanceContainer", "resetLights"]
+- !private ["PSo21UIAppearanceContainer", "sequencer"]
+- !private ["PSo21UIAppearanceContainer", "setupLights"]
+- !private ["PSo21UIAppearanceContainer", "southLight"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- !private ["PSo21UIAppearanceContainer", "westLight"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo8UIButton", "isSelected"]
+- !private ["PSo18UIContentContainer", "Sequencer"]
+- !private ["PSo18UIContentContainer", "eastLight"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "northLight"]
+- !private ["PSo18UIContentContainer", "resetLights"]
+- !private ["PSo18UIContentContainer", "sequencer"]
+- !private ["PSo18UIContentContainer", "setupLights"]
+- !private ["PSo18UIContentContainer", "southLight"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- !private ["PSo18UIContentContainer", "westLight"]
+- ["PSo18UIContentContainer", ""]
+- !private ["CSo9UIControl", "isSelected"]
+- !private ["PSo17UICoordinateSpace", "direction"]
+- !private ["PSo17UICoordinateSpace", "isSelected"]
+- !private ["PSo13UIDynamicItem", "direction"]
+- !private ["PSo13UIDynamicItem", "isSelected"]
+- !private ["PSo18UIFocusEnvironment", "Sequencer"]
+- !private ["PSo18UIFocusEnvironment", "direction"]
+- !private ["PSo18UIFocusEnvironment", "eastLight"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isSelected"]
+- !private ["PSo18UIFocusEnvironment", "northLight"]
+- !private ["PSo18UIFocusEnvironment", "resetLights"]
+- !private ["PSo18UIFocusEnvironment", "sequencer"]
+- !private ["PSo18UIFocusEnvironment", "setupLights"]
+- !private ["PSo18UIFocusEnvironment", "southLight"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- !private ["PSo18UIFocusEnvironment", "westLight"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "direction"]
+- !private ["PSo11UIFocusItem", "isSelected"]
+- !private ["CSo11UIImageView", "direction"]
+- ["CSo11UIResponder", "Sequencer"]
+- ["CSo11UIResponder", "TrafficLight"]
+- ["CSo11UIResponder", "UIButton"]
+- !private ["CSo11UIResponder", "direction"]
+- ["CSo11UIResponder", "eastLight"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isSelected"]
+- ["CSo11UIResponder", "northLight"]
+- ["CSo11UIResponder", "resetLights"]
+- ["CSo11UIResponder", "sequencer"]
+- ["CSo11UIResponder", "setupLights"]
+- ["CSo11UIResponder", "southLight"]
+- ["CSo11UIResponder", "startStop"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- ["CSo11UIResponder", "westLight"]
+- !private ["PSo30UIResponderStandardEditActions", "Sequencer"]
+- !private ["PSo30UIResponderStandardEditActions", "direction"]
+- !private ["PSo30UIResponderStandardEditActions", "eastLight"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "isSelected"]
+- !private ["PSo30UIResponderStandardEditActions", "northLight"]
+- !private ["PSo30UIResponderStandardEditActions", "resetLights"]
+- !private ["PSo30UIResponderStandardEditActions", "sequencer"]
+- !private ["PSo30UIResponderStandardEditActions", "setupLights"]
+- !private ["PSo30UIResponderStandardEditActions", "southLight"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "westLight"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "Sequencer"]
+- !private ["PSo16UIStateRestoring", "eastLight"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "northLight"]
+- !private ["PSo16UIStateRestoring", "resetLights"]
+- !private ["PSo16UIStateRestoring", "sequencer"]
+- !private ["PSo16UIStateRestoring", "setupLights"]
+- !private ["PSo16UIStateRestoring", "southLight"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "westLight"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "Sequencer"]
+- !private ["PSo18UITraitEnvironment", "direction"]
+- !private ["PSo18UITraitEnvironment", "eastLight"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isSelected"]
+- !private ["PSo18UITraitEnvironment", "northLight"]
+- !private ["PSo18UITraitEnvironment", "resetLights"]
+- !private ["PSo18UITraitEnvironment", "sequencer"]
+- !private ["PSo18UITraitEnvironment", "setupLights"]
+- !private ["PSo18UITraitEnvironment", "southLight"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- !private ["PSo18UITraitEnvironment", "westLight"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "direction"]
+- !private ["CSo6UIView", "isSelected"]
+- ["CSo16UIViewController", "Sequencer"]
+- ["CSo16UIViewController", "TrafficLight"]
+- ["CSo16UIViewController", "UIButton"]
+- ["CSo16UIViewController", "eastLight"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "northLight"]
+- ["CSo16UIViewController", "resetLights"]
+- ["CSo16UIViewController", "sequencer"]
+- ["CSo16UIViewController", "setupLights"]
+- ["CSo16UIViewController", "southLight"]
+- ["CSo16UIViewController", "startStop"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", "westLight"]
+- ["CSo16UIViewController", ""]
+- ["C14Traffic_Lights14ViewController", "Sequencer"]
+- ["C14Traffic_Lights14ViewController", "TrafficLight"]
+- ["C14Traffic_Lights14ViewController", "UIButton"]
+- ["C14Traffic_Lights14ViewController", "deinit"]
+- ["C14Traffic_Lights14ViewController", "eastLight"]
+- ["C14Traffic_Lights14ViewController", "init"]
+- ["C14Traffic_Lights14ViewController", "northLight"]
+- !private ["C14Traffic_Lights14ViewController", "resetLights"]
+- !private ["C14Traffic_Lights14ViewController", "sequencer"]
+- !private ["C14Traffic_Lights14ViewController", "setupLights"]
+- ["C14Traffic_Lights14ViewController", "southLight"]
+- ["C14Traffic_Lights14ViewController", "startStop"]
+- ["C14Traffic_Lights14ViewController", "viewDidLoad"]
+- ["C14Traffic_Lights14ViewController", "westLight"]
+- !private ["Ps14_ArrayProtocol", "forEach"]
+- !private ["Ps23_BidirectionalIndexable", "forEach"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "direction"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isSelected"]
+- !private ["Ps24_DestructorSafeContainer", "forEach"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "Sequencer"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "direction"]
+- !private ["Ps9_Hashable", "eastLight"]
+- !private ["Ps9_Hashable", "eastWest"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isSelected"]
+- !private ["Ps9_Hashable", "northLight"]
+- !private ["Ps9_Hashable", "northSouth"]
+- !private ["Ps9_Hashable", "resetLights"]
+- !private ["Ps9_Hashable", "sequencer"]
+- !private ["Ps9_Hashable", "setupLights"]
+- !private ["Ps9_Hashable", "southLight"]
+- !private ["Ps9_Hashable", "start"]
+- !private ["Ps9_Hashable", "stop"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- !private ["Ps9_Hashable", "westLight"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps10_Indexable", "forEach"]
+- !private ["Ps14_IndexableBase", "forEach"]
+- !private ["Ps17_MutableIndexable", "forEach"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "forEach"]
+- !private ["Ps22_RandomAccessIndexable", "forEach"]
+- !private ["Ps26_RangeReplaceableIndexable", "forEach"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Sb"
+- !private "PSo15CALayerDelegate"
+- "Ps7CVarArg"
+- !private "Ps10Collection"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "OC14Traffic_Lights12TrafficLight9Direction"
+- "Ps9Equatable"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps17MutableCollection"
+- "PSo8NSCoding"
+- "PSo26NSExtensionRequestHandling"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps8Sequence"
+- !private "C14Traffic_Lights9Sequencer"
+- !private "C14Traffic_Lights12TrafficLight"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo8UIButton"
+- "PSo18UIContentContainer"
+- !private "CSo9UIControl"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "CSo11UIImageView"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- "C14Traffic_Lights14ViewController"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps17_MutableIndexable"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessIndexable"
+- !private "Ps26_RangeReplaceableIndexable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "586e16b019d74c0fc764aa04c05016e5"

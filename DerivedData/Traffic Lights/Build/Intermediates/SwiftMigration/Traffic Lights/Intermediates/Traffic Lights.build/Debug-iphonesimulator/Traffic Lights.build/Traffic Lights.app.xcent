@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>application-identifier</key>
+	<string>FEQZJ6JWRE.Traffic-Lights</string>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>FEQZJ6JWRE.Traffic-Lights</string>
+	</array>
+</dict>
+</plist>

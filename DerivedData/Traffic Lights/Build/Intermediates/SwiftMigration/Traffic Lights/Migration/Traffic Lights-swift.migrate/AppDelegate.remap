@@ -1,0 +1,44 @@
+[
+ {
+  "file": "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift",
+  "offset": 187,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift",
+  "offset": 261,
+  "remove": 8,
+  "text": "UIApplicationLaunchOptionsKey",
+ },
+ {
+  "file": "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift",
+  "offset": 273,
+  "remove": 7,
+  "text": "y",
+ },
+ {
+  "file": "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift",
+  "offset": 428,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift",
+  "offset": 946,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift",
+  "offset": 1384,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift",
+  "offset": 1615,
+  "text": "_ ",
+ },
+ {
+  "file": "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift",
+  "offset": 1881,
+  "text": "_ ",
+ }
+]

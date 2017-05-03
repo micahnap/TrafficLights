@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Traffic_Lights" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="Uuv-J2-h8p" customClass="TrafficLight" customModule="Traffic_Lights" customModuleProvider="target">
+                                <rect key="frame" x="155" y="40" width="64" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="DuU-bE-jsj" customClass="TrafficLight" customModule="Traffic_Lights" customModuleProvider="target">
+                                <rect key="frame" x="291" y="269.5" width="64" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-or-6sr" customClass="TrafficLight" customModule="Traffic_Lights" customModuleProvider="target">
+                                <rect key="frame" x="20" y="269.5" width="64" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwM-5t-cMR">
+                                <rect key="frame" x="163" y="313.5" width="49" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Start"/>
+                                <state key="selected" title="Stop"/>
+                                <connections>
+                                    <action selector="startStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSk-ej-ycw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="I1d-le-bDo" customClass="TrafficLight" customModule="Traffic_Lights" customModuleProvider="target">
+                                <rect key="frame" x="155" y="499" width="64" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DuU-bE-jsj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1ew-BB-Gv4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I1d-le-bDo" secondAttribute="bottom" constant="40" id="ByI-vJ-bF2"/>
+                            <constraint firstAttribute="leading" secondItem="dOj-or-6sr" secondAttribute="leading" constant="-20" id="DZy-a2-lFm"/>
+                            <constraint firstItem="OwM-5t-cMR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eux-gZ-XWc"/>
+                            <constraint firstItem="OwM-5t-cMR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HBy-8N-35G"/>
+                            <constraint firstItem="I1d-le-bDo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HWV-sm-AAL"/>
+                            <constraint firstItem="dOj-or-6sr" firstAttribute="baseline" secondItem="DuU-bE-jsj" secondAttribute="baseline" id="UUd-uQ-tI4"/>
+                            <constraint firstAttribute="trailing" secondItem="DuU-bE-jsj" secondAttribute="trailing" constant="20" id="bVx-Yr-Ky9"/>
+                            <constraint firstItem="Uuv-J2-h8p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bve-kM-Df5"/>
+                            <constraint firstItem="Uuv-J2-h8p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="fGy-hV-8eo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eastLight" destination="DuU-bE-jsj" id="F7V-jt-MpU"/>
+                        <outlet property="northLight" destination="Uuv-J2-h8p" id="8Ak-kK-ub8"/>
+                        <outlet property="southLight" destination="I1d-le-bDo" id="IfA-jU-Ncp"/>
+                        <outlet property="westLight" destination="dOj-or-6sr" id="TrO-1C-HQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="green" width="64" height="128"/>
+    </resources>
+</document>

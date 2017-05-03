@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "e64b594e46fe3a2a7e6b056bb14c64f0"
+build_time: [547006214, 433148000]
+inputs:
+  "/Users/micah.napier/Downloads/Traffic Lights/Traffic LightsTests/Traffic_LightsTests.swift": [522828295, 0]

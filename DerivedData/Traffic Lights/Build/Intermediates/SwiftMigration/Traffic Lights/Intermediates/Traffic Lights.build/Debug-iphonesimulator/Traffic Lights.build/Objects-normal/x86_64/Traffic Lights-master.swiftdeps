@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "a5638ee6d73fee002e4ab8be81f4789c"
+build_time: [547006197, 908114000]
+inputs:
+  "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/ViewController.swift": [522828291, 0]
+  "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift": [522828291, 0]
