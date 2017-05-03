@@ -1,8 +1,8 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
 options: "6cee3a7f1cfd2189463d44b9caa7783c"
-build_time: [547106987, 707672000]
+build_time: [547151080, 612238000]
 inputs:
-  "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/ViewController.swift": [547100667, 0]
-  "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/Sequencer.swift": [547106987, 0]
+  "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/ViewController.swift": [547150866, 0]
+  "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/Sequencer.swift": [547150558, 0]
   "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/AppDelegate.swift": [547006229, 0]
-  "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/TrafficLight.swift": [547086898, 0]
+  "/Users/micah.napier/Downloads/Traffic Lights/Traffic Lights/TrafficLight.swift": [547134842, 0]

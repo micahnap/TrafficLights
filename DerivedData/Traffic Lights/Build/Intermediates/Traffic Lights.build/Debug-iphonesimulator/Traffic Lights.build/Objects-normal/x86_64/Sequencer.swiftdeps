@@ -8,35 +8,35 @@ provides-member:
 provides-dynamic-lookup:
 - "start"
 - "stop"
-- "timer"
 - "updateTrafficLights"
 depends-top-level:
 - !private "!"
-- !private "+"
 - !private "=="
 - "AssignmentPrecedence"
-- "Bool"
-- "BooleanLiteralType"
-- !private "DispatchQueue"
-- "DispatchWorkItem"
-- !private "Int"
+- !private "BooleanLiteralType"
+- "Int"
 - "NSObject"
 - "Sequencer"
 - !private "StringLiteralType"
 - !private "TernaryPrecedence"
+- !private "TimeInterval"
 - "Timer"
 - "TrafficLight"
 depends-member:
-- !private ["Ps16AbsoluteValuable", "seconds"]
-- !private ["Ps9AnyObject", "DispatchQueue"]
-- !private ["Ps9AnyObject", "Int"]
-- !private ["Ps9AnyObject", "asyncAfter"]
+- !private ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps9AnyObject", "TimeInterval"]
+- !private ["Ps9AnyObject", "Timer"]
+- !private ["Ps9AnyObject", "amberTime"]
 - !private ["Ps9AnyObject", "init"]
-- !private ["Ps9AnyObject", "isStopped"]
-- !private ["Ps9AnyObject", "main"]
+- !private ["Ps9AnyObject", "invalidate"]
+- !private ["Ps9AnyObject", "redGreenTime"]
+- !private ["Ps9AnyObject", "reset"]
+- !private ["Ps9AnyObject", "scheduledTimer"]
 - !private ["Ps9AnyObject", "start"]
 - !private ["Ps9AnyObject", "state"]
+- !private ["Ps9AnyObject", "timer"]
 - !private ["Ps9AnyObject", "trafficLights"]
+- !private ["Ps9AnyObject", "updateLightsAfter"]
 - !private ["Ps9AnyObject", "updateTrafficLights"]
 - ["Ps9AnyObject", ""]
 - !private ["Sa", "filter"]
@@ -45,51 +45,54 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "filter"]
 - !private ["Ps23BidirectionalCollection", "forEach"]
 - !private ["Ps23BidirectionalCollection", "isEmpty"]
-- !private ["Ps19BinaryFloatingPoint", "seconds"]
-- !private ["Ps17BitwiseOperations", "init"]
+- !private ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSo15CALayerDelegate", "reset"]
 - !private ["PSo15CALayerDelegate", "state"]
-- !private ["Ps7CVarArg", "DispatchQueue"]
-- !private ["Ps7CVarArg", "Int"]
-- !private ["Ps7CVarArg", "asyncAfter"]
+- !private ["Ps7CVarArg", "TimeInterval"]
+- !private ["Ps7CVarArg", "Timer"]
+- !private ["Ps7CVarArg", "amberTime"]
 - !private ["Ps7CVarArg", "filter"]
 - !private ["Ps7CVarArg", "forEach"]
 - !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "invalidate"]
 - !private ["Ps7CVarArg", "isEmpty"]
-- !private ["Ps7CVarArg", "isStopped"]
-- !private ["Ps7CVarArg", "main"]
-- !private ["Ps7CVarArg", "seconds"]
+- !private ["Ps7CVarArg", "redGreenTime"]
+- !private ["Ps7CVarArg", "reset"]
+- !private ["Ps7CVarArg", "scheduledTimer"]
 - !private ["Ps7CVarArg", "start"]
 - !private ["Ps7CVarArg", "state"]
+- !private ["Ps7CVarArg", "timer"]
 - !private ["Ps7CVarArg", "trafficLights"]
+- !private ["Ps7CVarArg", "updateLightsAfter"]
 - !private ["Ps7CVarArg", "updateTrafficLights"]
 - ["Ps7CVarArg", ""]
 - !private ["Ps10Collection", "filter"]
 - !private ["Ps10Collection", "forEach"]
 - !private ["Ps10Collection", "isEmpty"]
 - !private ["Ps10Comparable", "init"]
-- !private ["Ps10Comparable", "now"]
-- !private ["Ps10Comparable", "seconds"]
-- !private ["Ps28CustomDebugStringConvertible", "DispatchQueue"]
-- !private ["Ps28CustomDebugStringConvertible", "Int"]
+- !private ["Ps28CustomDebugStringConvertible", "TimeInterval"]
+- !private ["Ps28CustomDebugStringConvertible", "Timer"]
 - !private ["Ps28CustomDebugStringConvertible", "amber"]
-- !private ["Ps28CustomDebugStringConvertible", "asyncAfter"]
+- !private ["Ps28CustomDebugStringConvertible", "amberTime"]
 - !private ["Ps28CustomDebugStringConvertible", "filter"]
 - !private ["Ps28CustomDebugStringConvertible", "forEach"]
 - !private ["Ps28CustomDebugStringConvertible", "green"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "invalidate"]
 - !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
-- !private ["Ps28CustomDebugStringConvertible", "isStopped"]
-- !private ["Ps28CustomDebugStringConvertible", "main"]
-- !private ["Ps28CustomDebugStringConvertible", "seconds"]
+- !private ["Ps28CustomDebugStringConvertible", "redGreenTime"]
+- !private ["Ps28CustomDebugStringConvertible", "reset"]
+- !private ["Ps28CustomDebugStringConvertible", "scheduledTimer"]
 - !private ["Ps28CustomDebugStringConvertible", "start"]
 - !private ["Ps28CustomDebugStringConvertible", "state"]
+- !private ["Ps28CustomDebugStringConvertible", "timer"]
 - !private ["Ps28CustomDebugStringConvertible", "trafficLights"]
+- !private ["Ps28CustomDebugStringConvertible", "updateLightsAfter"]
 - !private ["Ps28CustomDebugStringConvertible", "updateTrafficLights"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "seconds"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "amber"]
 - !private ["Ps17CustomReflectable", "filter"]
@@ -97,45 +100,43 @@ depends-member:
 - !private ["Ps17CustomReflectable", "green"]
 - !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "isEmpty"]
-- !private ["Ps17CustomReflectable", "seconds"]
-- !private ["Ps23CustomStringConvertible", "DispatchQueue"]
-- !private ["Ps23CustomStringConvertible", "Int"]
+- !private ["Ps23CustomStringConvertible", "TimeInterval"]
+- !private ["Ps23CustomStringConvertible", "Timer"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps23CustomStringConvertible", "asyncAfter"]
+- !private ["Ps23CustomStringConvertible", "amberTime"]
 - !private ["Ps23CustomStringConvertible", "filter"]
 - !private ["Ps23CustomStringConvertible", "forEach"]
 - !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "invalidate"]
 - !private ["Ps23CustomStringConvertible", "isEmpty"]
-- !private ["Ps23CustomStringConvertible", "isStopped"]
-- !private ["Ps23CustomStringConvertible", "main"]
-- !private ["Ps23CustomStringConvertible", "seconds"]
+- !private ["Ps23CustomStringConvertible", "redGreenTime"]
+- !private ["Ps23CustomStringConvertible", "reset"]
+- !private ["Ps23CustomStringConvertible", "scheduledTimer"]
 - !private ["Ps23CustomStringConvertible", "start"]
 - !private ["Ps23CustomStringConvertible", "state"]
+- !private ["Ps23CustomStringConvertible", "timer"]
 - !private ["Ps23CustomStringConvertible", "trafficLights"]
+- !private ["Ps23CustomStringConvertible", "updateLightsAfter"]
 - !private ["Ps23CustomStringConvertible", "updateTrafficLights"]
 - ["Ps23CustomStringConvertible", ""]
-- !private ["CSo14DispatchObject", "asyncAfter"]
-- !private ["CSo14DispatchObject", "main"]
-- !private ["CSo13DispatchQueue", "asyncAfter"]
-- !private ["CSo13DispatchQueue", "main"]
-- !private ["V8Dispatch12DispatchTime", "now"]
-- !private ["O8Dispatch20DispatchTimeInterval", "seconds"]
-- !private ["Sd", "seconds"]
-- !private ["Ps9Equatable", "DispatchQueue"]
-- !private ["Ps9Equatable", "Int"]
+- !private ["Sd", "init"]
+- !private ["Ps9Equatable", "TimeInterval"]
+- !private ["Ps9Equatable", "Timer"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "amber"]
-- !private ["Ps9Equatable", "asyncAfter"]
+- !private ["Ps9Equatable", "amberTime"]
 - !private ["Ps9Equatable", "green"]
 - !private ["Ps9Equatable", "init"]
-- !private ["Ps9Equatable", "isStopped"]
-- !private ["Ps9Equatable", "main"]
-- !private ["Ps9Equatable", "now"]
+- !private ["Ps9Equatable", "invalidate"]
 - !private ["Ps9Equatable", "red"]
-- !private ["Ps9Equatable", "seconds"]
+- !private ["Ps9Equatable", "redGreenTime"]
+- !private ["Ps9Equatable", "reset"]
+- !private ["Ps9Equatable", "scheduledTimer"]
 - !private ["Ps9Equatable", "start"]
 - !private ["Ps9Equatable", "state"]
+- !private ["Ps9Equatable", "timer"]
 - !private ["Ps9Equatable", "trafficLights"]
+- !private ["Ps9Equatable", "updateLightsAfter"]
 - !private ["Ps9Equatable", "updateTrafficLights"]
 - ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "filter"]
@@ -143,71 +144,72 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "isEmpty"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps25ExpressibleByFloatLiteral", "seconds"]
+- !private ["Ps25ExpressibleByFloatLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "seconds"]
 - !private ["Ps23ExpressibleByNilLiteral", "amber"]
 - !private ["Ps23ExpressibleByNilLiteral", "green"]
 - !private ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
-- !private ["Ps13FloatingPoint", "seconds"]
-- !private ["Ps8Hashable", "DispatchQueue"]
-- !private ["Ps8Hashable", "Int"]
+- !private ["Ps13FloatingPoint", "init"]
+- !private ["Ps8Hashable", "TimeInterval"]
+- !private ["Ps8Hashable", "Timer"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "amber"]
-- !private ["Ps8Hashable", "asyncAfter"]
+- !private ["Ps8Hashable", "amberTime"]
 - !private ["Ps8Hashable", "green"]
 - !private ["Ps8Hashable", "init"]
-- !private ["Ps8Hashable", "isStopped"]
-- !private ["Ps8Hashable", "main"]
+- !private ["Ps8Hashable", "invalidate"]
 - !private ["Ps8Hashable", "red"]
-- !private ["Ps8Hashable", "seconds"]
+- !private ["Ps8Hashable", "redGreenTime"]
+- !private ["Ps8Hashable", "reset"]
+- !private ["Ps8Hashable", "scheduledTimer"]
 - !private ["Ps8Hashable", "start"]
 - !private ["Ps8Hashable", "state"]
+- !private ["Ps8Hashable", "timer"]
 - !private ["Ps8Hashable", "trafficLights"]
+- !private ["Ps8Hashable", "updateLightsAfter"]
 - !private ["Ps8Hashable", "updateTrafficLights"]
 - ["Ps8Hashable", ""]
-- !private ["Si", "init"]
-- !private ["Ps7Integer", "init"]
-- !private ["Ps17IntegerArithmetic", "init"]
 - !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps25LosslessStringConvertible", "seconds"]
-- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps17MutableCollection", "filter"]
 - !private ["Ps17MutableCollection", "forEach"]
 - !private ["Ps17MutableCollection", "isEmpty"]
+- !private ["PSo8NSCoding", "reset"]
 - !private ["PSo8NSCoding", "state"]
-- ["CSo8NSObject", "Bool"]
-- !private ["CSo8NSObject", "DispatchQueue"]
-- ["CSo8NSObject", "DispatchWorkItem"]
-- !private ["CSo8NSObject", "Int"]
+- ["CSo8NSObject", "Int"]
+- !private ["CSo8NSObject", "TimeInterval"]
 - ["CSo8NSObject", "Timer"]
 - ["CSo8NSObject", "TrafficLight"]
-- !private ["CSo8NSObject", "asyncAfter"]
-- ["CSo8NSObject", "dispatchTask"]
+- ["CSo8NSObject", "amberTime"]
 - ["CSo8NSObject", "init"]
-- ["CSo8NSObject", "isStopped"]
-- !private ["CSo8NSObject", "main"]
+- !private ["CSo8NSObject", "invalidate"]
+- ["CSo8NSObject", "redGreenTime"]
+- !private ["CSo8NSObject", "reset"]
+- !private ["CSo8NSObject", "scheduledTimer"]
 - ["CSo8NSObject", "start"]
 - !private ["CSo8NSObject", "state"]
 - ["CSo8NSObject", "stop"]
 - ["CSo8NSObject", "timer"]
 - ["CSo8NSObject", "trafficLights"]
+- ["CSo8NSObject", "updateLightsAfter"]
 - ["CSo8NSObject", "updateTrafficLights"]
 - ["CSo8NSObject", ""]
-- !private ["PSo16NSObjectProtocol", "DispatchQueue"]
-- !private ["PSo16NSObjectProtocol", "Int"]
-- !private ["PSo16NSObjectProtocol", "asyncAfter"]
+- !private ["PSo16NSObjectProtocol", "TimeInterval"]
+- !private ["PSo16NSObjectProtocol", "Timer"]
+- !private ["PSo16NSObjectProtocol", "amberTime"]
 - !private ["PSo16NSObjectProtocol", "init"]
-- !private ["PSo16NSObjectProtocol", "isStopped"]
-- !private ["PSo16NSObjectProtocol", "main"]
+- !private ["PSo16NSObjectProtocol", "invalidate"]
+- !private ["PSo16NSObjectProtocol", "redGreenTime"]
+- !private ["PSo16NSObjectProtocol", "reset"]
+- !private ["PSo16NSObjectProtocol", "scheduledTimer"]
 - !private ["PSo16NSObjectProtocol", "start"]
 - !private ["PSo16NSObjectProtocol", "state"]
+- !private ["PSo16NSObjectProtocol", "timer"]
 - !private ["PSo16NSObjectProtocol", "trafficLights"]
+- !private ["PSo16NSObjectProtocol", "updateLightsAfter"]
 - !private ["PSo16NSObjectProtocol", "updateTrafficLights"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["CSo9OS_object", "asyncAfter"]
-- !private ["CSo9OS_object", "main"]
 - !private ["Sq", "amber"]
 - !private ["Sq", "green"]
 - !private ["Ps22RandomAccessCollection", "filter"]
@@ -219,43 +221,54 @@ depends-member:
 - !private ["Ps8Sequence", "filter"]
 - !private ["Ps8Sequence", "forEach"]
 - !private ["Ps8Sequence", "isEmpty"]
-- ["C14Traffic_Lights9Sequencer", "Bool"]
-- !private ["C14Traffic_Lights9Sequencer", "DispatchQueue"]
-- ["C14Traffic_Lights9Sequencer", "DispatchWorkItem"]
-- !private ["C14Traffic_Lights9Sequencer", "Int"]
+- ["C14Traffic_Lights9Sequencer", "Int"]
+- !private ["C14Traffic_Lights9Sequencer", "TimeInterval"]
 - ["C14Traffic_Lights9Sequencer", "Timer"]
 - ["C14Traffic_Lights9Sequencer", "TrafficLight"]
+- !private ["C14Traffic_Lights9Sequencer", "amberTime"]
 - ["C14Traffic_Lights9Sequencer", "deinit"]
-- !private ["C14Traffic_Lights9Sequencer", "dispatchTask"]
 - ["C14Traffic_Lights9Sequencer", "init"]
-- !private ["C14Traffic_Lights9Sequencer", "isStopped"]
+- !private ["C14Traffic_Lights9Sequencer", "redGreenTime"]
 - ["C14Traffic_Lights9Sequencer", "start"]
 - ["C14Traffic_Lights9Sequencer", "stop"]
-- ["C14Traffic_Lights9Sequencer", "timer"]
+- !private ["C14Traffic_Lights9Sequencer", "timer"]
 - !private ["C14Traffic_Lights9Sequencer", "trafficLights"]
+- !private ["C14Traffic_Lights9Sequencer", "updateLightsAfter"]
 - !private ["C14Traffic_Lights9Sequencer", "updateTrafficLights"]
-- !private ["Ps13SignedInteger", "init"]
 - !private ["Ps12SignedNumber", "init"]
-- !private ["Ps12SignedNumber", "seconds"]
 - !private ["Vs12StaticString", "init"]
 - !private ["Ps10Strideable", "init"]
-- !private ["Ps10Strideable", "seconds"]
+- !private ["CSo5Timer", "invalidate"]
+- !private ["CSo5Timer", "scheduledTimer"]
+- !private ["C14Traffic_Lights12TrafficLight", "reset"]
 - !private ["C14Traffic_Lights12TrafficLight", "state"]
 - !private ["OC14Traffic_Lights12TrafficLight12TrafficState", "amber"]
 - !private ["OC14Traffic_Lights12TrafficLight12TrafficState", "deinit"]
 - !private ["OC14Traffic_Lights12TrafficLight12TrafficState", "green"]
 - !private ["OC14Traffic_Lights12TrafficLight12TrafficState", "red"]
+- !private ["PSo29UIAccessibilityIdentification", "reset"]
 - !private ["PSo29UIAccessibilityIdentification", "state"]
+- !private ["PSo12UIAppearance", "reset"]
 - !private ["PSo12UIAppearance", "state"]
+- !private ["PSo21UIAppearanceContainer", "reset"]
 - !private ["PSo21UIAppearanceContainer", "state"]
+- !private ["PSo17UICoordinateSpace", "reset"]
 - !private ["PSo17UICoordinateSpace", "state"]
+- !private ["PSo13UIDynamicItem", "reset"]
 - !private ["PSo13UIDynamicItem", "state"]
+- !private ["PSo18UIFocusEnvironment", "reset"]
 - !private ["PSo18UIFocusEnvironment", "state"]
+- !private ["PSo11UIFocusItem", "reset"]
 - !private ["PSo11UIFocusItem", "state"]
+- !private ["CSo11UIImageView", "reset"]
 - !private ["CSo11UIImageView", "state"]
+- !private ["CSo11UIResponder", "reset"]
 - !private ["CSo11UIResponder", "state"]
+- !private ["PSo30UIResponderStandardEditActions", "reset"]
 - !private ["PSo30UIResponderStandardEditActions", "state"]
+- !private ["PSo18UITraitEnvironment", "reset"]
 - !private ["PSo18UITraitEnvironment", "state"]
+- !private ["CSo6UIView", "reset"]
 - !private ["CSo6UIView", "state"]
 - !private ["Ps14_ArrayProtocol", "filter"]
 - !private ["Ps14_ArrayProtocol", "forEach"]
@@ -263,44 +276,44 @@ depends-member:
 - !private ["Ps23_BidirectionalIndexable", "filter"]
 - !private ["Ps23_BidirectionalIndexable", "forEach"]
 - !private ["Ps23_BidirectionalIndexable", "isEmpty"]
-- !private ["Ps15_CVarArgAligned", "seconds"]
-- !private ["Ps22_CVarArgPassedAsDouble", "seconds"]
+- !private ["Ps15_CVarArgAligned", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "reset"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "state"]
 - !private ["Ps24_DestructorSafeContainer", "filter"]
 - !private ["Ps24_DestructorSafeContainer", "forEach"]
 - !private ["Ps24_DestructorSafeContainer", "isEmpty"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "seconds"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "seconds"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
-- !private ["Ps9_Hashable", "DispatchQueue"]
-- !private ["Ps9_Hashable", "Int"]
+- !private ["Ps9_Hashable", "TimeInterval"]
+- !private ["Ps9_Hashable", "Timer"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "amber"]
-- !private ["Ps9_Hashable", "asyncAfter"]
+- !private ["Ps9_Hashable", "amberTime"]
 - !private ["Ps9_Hashable", "green"]
 - !private ["Ps9_Hashable", "init"]
-- !private ["Ps9_Hashable", "isStopped"]
-- !private ["Ps9_Hashable", "main"]
+- !private ["Ps9_Hashable", "invalidate"]
 - !private ["Ps9_Hashable", "red"]
-- !private ["Ps9_Hashable", "seconds"]
+- !private ["Ps9_Hashable", "redGreenTime"]
+- !private ["Ps9_Hashable", "reset"]
+- !private ["Ps9_Hashable", "scheduledTimer"]
 - !private ["Ps9_Hashable", "start"]
 - !private ["Ps9_Hashable", "state"]
+- !private ["Ps9_Hashable", "timer"]
 - !private ["Ps9_Hashable", "trafficLights"]
+- !private ["Ps9_Hashable", "updateLightsAfter"]
 - !private ["Ps9_Hashable", "updateTrafficLights"]
 - ["Ps9_Hashable", ""]
-- !private ["Ps14_Incrementable", "init"]
 - !private ["Ps10_Indexable", "filter"]
 - !private ["Ps10_Indexable", "forEach"]
 - !private ["Ps10_Indexable", "isEmpty"]
 - !private ["Ps14_IndexableBase", "filter"]
 - !private ["Ps14_IndexableBase", "forEach"]
 - !private ["Ps14_IndexableBase", "isEmpty"]
-- !private ["Ps8_Integer", "init"]
-- !private ["Ps18_IntegerArithmetic", "init"]
 - !private ["Ps17_MutableIndexable", "filter"]
 - !private ["Ps17_MutableIndexable", "forEach"]
 - !private ["Ps17_MutableIndexable", "isEmpty"]
@@ -311,7 +324,6 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "green"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "isEmpty"]
-- !private ["Ps21_ObjectiveCBridgeable", "seconds"]
 - !private ["Vs26_OptionalNilComparisonType", "amber"]
 - !private ["Vs26_OptionalNilComparisonType", "green"]
 - !private ["Ps22_RandomAccessIndexable", "filter"]
@@ -320,16 +332,13 @@ depends-member:
 - !private ["Ps26_RangeReplaceableIndexable", "filter"]
 - !private ["Ps26_RangeReplaceableIndexable", "forEach"]
 - !private ["Ps26_RangeReplaceableIndexable", "isEmpty"]
-- !private ["Ps14_SignedInteger", "init"]
 - !private ["Ps11_Strideable", "init"]
-- !private ["Ps11_Strideable", "seconds"]
 depends-nominal:
 - !private "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
 - !private "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps19BinaryFloatingPoint"
-- !private "Ps17BitwiseOperations"
 - !private "Sb"
 - !private "PSo15CALayerDelegate"
 - "Ps7CVarArg"
@@ -339,10 +348,6 @@ depends-nominal:
 - !private "Ps29CustomPlaygroundQuickLookable"
 - !private "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
-- !private "CSo14DispatchObject"
-- !private "CSo13DispatchQueue"
-- !private "V8Dispatch12DispatchTime"
-- !private "O8Dispatch20DispatchTimeInterval"
 - !private "Sd"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
@@ -355,25 +360,20 @@ depends-nominal:
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Ps13FloatingPoint"
 - "Ps8Hashable"
-- !private "Si"
-- !private "Ps7Integer"
-- !private "Ps17IntegerArithmetic"
 - !private "Ps25LosslessStringConvertible"
-- !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
 - !private "PSo8NSCoding"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "CSo9OS_object"
 - !private "Sq"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps26RangeReplaceableCollection"
 - !private "Ps8Sequence"
 - "C14Traffic_Lights9Sequencer"
-- !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Vs12StaticString"
 - !private "Ps10Strideable"
+- !private "CSo5Timer"
 - !private "C14Traffic_Lights12TrafficLight"
 - !private "OC14Traffic_Lights12TrafficLight12TrafficState"
 - !private "PSo29UIAccessibilityIdentification"
@@ -401,17 +401,13 @@ depends-nominal:
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
 - "Ps9_Hashable"
-- !private "Ps14_Incrementable"
 - !private "Ps10_Indexable"
 - !private "Ps14_IndexableBase"
-- !private "Ps8_Integer"
-- !private "Ps18_IntegerArithmetic"
 - !private "Ps17_MutableIndexable"
 - !private "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
 - !private "Ps22_RandomAccessIndexable"
 - !private "Ps26_RangeReplaceableIndexable"
-- !private "Ps14_SignedInteger"
 - !private "Ps11_Strideable"
 depends-dynamic-lookup:
 depends-external:
@@ -431,4 +427,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-interface-hash: "6f028ad3adadf6250efd43518f95c39f"
+interface-hash: "1a315ee70571ff453bcd7d7061772364"

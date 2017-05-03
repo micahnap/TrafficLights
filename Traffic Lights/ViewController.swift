@@ -6,11 +6,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var northLight: TrafficLight!
-    @IBOutlet weak var southLight: TrafficLight!
-    @IBOutlet weak var eastLight: TrafficLight!
-    @IBOutlet weak var westLight: TrafficLight!
+    
+    @IBOutlet var northSouthLights: [TrafficLight]!
+    @IBOutlet var eastWestLights: [TrafficLight]!
     
     private var sequencer: Sequencer!
 
@@ -21,33 +19,20 @@ class ViewController: UIViewController {
 
     private func setupLights() {
         
-        sequencer = Sequencer(trafficLights: [northLight, southLight, eastLight, westLight])
-        resetLights()
-    }
-    
-    private func resetLights() {
+        sequencer = Sequencer(trafficLights: northSouthLights + eastWestLights, redGreenTime: 30, amberTime: 5)
         
-        [northLight, southLight].forEach { (trafficLight) in
-            trafficLight!.direction = .northSouth
+        northSouthLights.forEach { (trafficLight) in
+            trafficLight.direction = .northSouth
         }
         
-        [eastLight, westLight].forEach { (trafficLight) in
-            trafficLight!.direction = .eastWest
+        eastWestLights.forEach { (trafficLight) in
+            trafficLight.direction = .eastWest
         }
-        
     }
     
     @IBAction func startStop(_ sender: UIButton) {
-        
         sender.isSelected = !sender.isSelected
-        
-        guard sender.isSelected else {
-            sequencer.stop()
-            resetLights()
-            return
-        }
-        
-        sequencer.start()
+        sender.isSelected ? sequencer.start() : sequencer.stop()
     }
 }
 

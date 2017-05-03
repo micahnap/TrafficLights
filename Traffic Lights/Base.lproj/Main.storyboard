@@ -58,10 +58,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="eastLight" destination="DuU-bE-jsj" id="F7V-jt-MpU"/>
-                        <outlet property="northLight" destination="Uuv-J2-h8p" id="8Ak-kK-ub8"/>
-                        <outlet property="southLight" destination="I1d-le-bDo" id="IfA-jU-Ncp"/>
-                        <outlet property="westLight" destination="dOj-or-6sr" id="TrO-1C-HQa"/>
+                        <outletCollection property="eastWestLights" destination="DuU-bE-jsj" collectionClass="NSMutableArray" id="B0U-gB-zFu"/>
+                        <outletCollection property="eastWestLights" destination="dOj-or-6sr" collectionClass="NSMutableArray" id="Ruc-hR-VbW"/>
+                        <outletCollection property="northSouthLights" destination="Uuv-J2-h8p" collectionClass="NSMutableArray" id="3b5-AZ-3bb"/>
+                        <outletCollection property="northSouthLights" destination="I1d-le-bDo" collectionClass="NSMutableArray" id="hmg-Y2-uZJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -2,7 +2,7 @@
 //  Sequencer.swift
 //  Traffic Lights
 //
-//  Created by Micah Napier on 2/5/17.
+//  Created by Micah Napier on 3/5/17.
 //
 //
 
@@ -11,11 +11,14 @@ import Foundation
 class Sequencer: NSObject {
     
     private var trafficLights: [TrafficLight] = []
-    private var isStopped: Bool = true
     private var timer: Timer?
+    private let redGreenTime: Int
+    private let amberTime: Int
     
-    init(trafficLights: [TrafficLight]) {
+    init(trafficLights: [TrafficLight], redGreenTime: Int, amberTime: Int) {
         self.trafficLights = trafficLights
+        self.redGreenTime = redGreenTime
+        self.amberTime = amberTime
         super.init()
     }
     
@@ -24,21 +27,23 @@ class Sequencer: NSObject {
         guard !trafficLights.isEmpty else {
             return
         }
-        
-        isStopped = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int(5)), execute: { self.updateTrafficLights() } )
-
+        updateLightsAfter(seconds: redGreenTime)
     }
     
     public func stop() {
-        isStopped = true
+        
+        timer?.invalidate()
+        
+        trafficLights.forEach { (light) in
+            light.reset()
+        }
+    }
+    
+    private func updateLightsAfter(seconds: Int) {
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(seconds), target: self, selector: #selector(updateTrafficLights), userInfo: nil, repeats: false)
     }
     
     @objc private func updateTrafficLights() {
-        
-        guard !isStopped else {
-            return
-        }
         
         let greenLights = trafficLights.filter( { $0.state == .green } )
         
@@ -48,7 +53,7 @@ class Sequencer: NSObject {
                 light.state = .amber
             })
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int(5)), execute: { self.updateTrafficLights() } )
+            updateLightsAfter(seconds: amberTime)
             
         } else {
             trafficLights.forEach({ (light) in

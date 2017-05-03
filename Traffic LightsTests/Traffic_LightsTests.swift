@@ -8,26 +8,39 @@ import XCTest
 
 class Traffic_LightsTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private var northSouthLight = TrafficLight(direction: .northSouth)
+    private var eastWestLight = TrafficLight(direction: .eastWest)
+    
+    func testDefaultTrafficLightState() {
+        
+        northSouthLight.direction = .northSouth
+        eastWestLight.direction = .eastWest
+        
+        XCTAssertEqual(.red, northSouthLight.state)
+        XCTAssertEqual(.green, eastWestLight.state)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testTrafficLightImagesReflectState() {
+        northSouthLight.state = .red
+        XCTAssertEqual(#imageLiteral(resourceName: "red"), northSouthLight.image)
+        
+        northSouthLight.state = .amber
+        XCTAssertEqual(#imageLiteral(resourceName: "amber"), northSouthLight.image)
+        
+        northSouthLight.state = .green
+        XCTAssertEqual(#imageLiteral(resourceName: "green"), northSouthLight.image)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testResetToLightsoDefaultState() {
+        northSouthLight.state = .amber
+        eastWestLight.state = .red
+        [northSouthLight, eastWestLight].forEach { (light) in
+            light.reset()
         }
+        
+        XCTAssertEqual(.red, northSouthLight.state)
+        XCTAssertEqual(.green, eastWestLight.state)
     }
+    
     
 }

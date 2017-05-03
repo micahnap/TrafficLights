@@ -154,13 +154,11 @@ SWIFT_CLASS("_TtC14Traffic_Lights11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSTimer;
 @class TrafficLight;
 
 SWIFT_CLASS("_TtC14Traffic_Lights9Sequencer")
 @interface Sequencer : NSObject
-@property (nonatomic, strong) NSTimer * _Nullable timer;
-- (nonnull instancetype)initWithTrafficLights:(NSArray<TrafficLight *> * _Nonnull)trafficLights OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithTrafficLights:(NSArray<TrafficLight *> * _Nonnull)trafficLights redGreenTime:(NSInteger)redGreenTime amberTime:(NSInteger)amberTime OBJC_DESIGNATED_INITIALIZER;
 - (void)start;
 - (void)stop;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -183,10 +181,8 @@ SWIFT_CLASS("_TtC14Traffic_Lights12TrafficLight")
 
 SWIFT_CLASS("_TtC14Traffic_Lights14ViewController")
 @interface ViewController : UIViewController
-@property (nonatomic, weak) IBOutlet TrafficLight * _Null_unspecified northLight;
-@property (nonatomic, weak) IBOutlet TrafficLight * _Null_unspecified southLight;
-@property (nonatomic, weak) IBOutlet TrafficLight * _Null_unspecified eastLight;
-@property (nonatomic, weak) IBOutlet TrafficLight * _Null_unspecified westLight;
+@property (nonatomic, copy) IBOutletCollection(TrafficLight) NSArray<TrafficLight *> * _Null_unspecified northSouthLights;
+@property (nonatomic, copy) IBOutletCollection(TrafficLight) NSArray<TrafficLight *> * _Null_unspecified eastWestLights;
 - (void)viewDidLoad;
 - (IBAction)startStop:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

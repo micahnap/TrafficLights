@@ -18,6 +18,11 @@ class TrafficLight: UIImageView {
         case northSouth, eastWest
     }
     
+    init(direction: Direction) {
+        super.init(image: nil)
+        self.direction = direction
+    }
+    
     required init?(coder aDecoder: NSCoder) {
          super.init(coder: aDecoder)
     }
