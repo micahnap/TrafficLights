@@ -154,10 +154,12 @@ SWIFT_CLASS("_TtC14Traffic_Lights11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSTimer;
 @class TrafficLight;
 
 SWIFT_CLASS("_TtC14Traffic_Lights9Sequencer")
 @interface Sequencer : NSObject
+@property (nonatomic, strong) NSTimer * _Nullable timer;
 - (nonnull instancetype)initWithTrafficLights:(NSArray<TrafficLight *> * _Nonnull)trafficLights OBJC_DESIGNATED_INITIALIZER;
 - (void)start;
 - (void)stop;

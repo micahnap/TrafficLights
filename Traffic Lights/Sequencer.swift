@@ -11,18 +11,12 @@ import Foundation
 class Sequencer: NSObject {
     
     private var trafficLights: [TrafficLight] = []
-    private var timerIsSuspended: Bool = true
-    private let timer: DispatchSourceTimer = {
-        let queue = DispatchQueue(label: "com.traffic.app.timer", attributes: .concurrent, target: .main)
-        let timer = DispatchSource.makeTimerSource(queue: queue)
-        return timer
-    }()
-    private var dispatchTask: DispatchWorkItem!
+    private var isStopped: Bool = true
+    private var timer: Timer?
+    
     init(trafficLights: [TrafficLight]) {
         self.trafficLights = trafficLights
-        
         super.init()
-        
     }
     
     public func start() {
@@ -31,34 +25,30 @@ class Sequencer: NSObject {
             return
         }
         
-        dispatchTask = DispatchWorkItem { self.updateTrafficLights() }
-        timer.scheduleRepeating(deadline: .now() + .seconds(5), interval: 5)
-        timer.setEventHandler(handler: dispatchTask)
-        timer.resume()
+        isStopped = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int(5)), execute: { self.updateTrafficLights() } )
 
     }
     
     public func stop() {
-        dispatchTask.cancel()
-        timer.suspend()
+        isStopped = true
     }
     
-    private func updateTrafficLights() {
+    @objc private func updateTrafficLights() {
         
-        guard !dispatchTask.isCancelled else {
+        guard !isStopped else {
             return
         }
+        
         let greenLights = trafficLights.filter( { $0.state == .green } )
         
         if !greenLights.isEmpty {
 
-            timer.suspend()
             greenLights.forEach({ (light) in
                 light.state = .amber
             })
 
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int(5)), execute: dispatchTask)
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int(5)), execute: { self.updateTrafficLights() } )
             
         } else {
             trafficLights.forEach({ (light) in
